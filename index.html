@@ -156,6 +156,18 @@
   .chips{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:30px;}
   .chip{font-family:var(--mono); font-size:12.5px; color:var(--blue); border:1px solid #dbe6ff; border-radius:9px; padding:9px 13px; background:var(--surface); box-shadow:var(--shadow-sm);}
 
+  /* ===== VOICES (testimonials) ===== */
+  .quotes{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .quote{position:relative; text-align:left; background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:22px 24px; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; gap:14px; transition:.22s;}
+  .quote:hover{border-color:rgba(62,126,255,.4); box-shadow:var(--shadow-md); transform:translateY(-2px);}
+  .quote .qt{font-size:14.5px; line-height:1.6; color:var(--ink); margin:0;}
+  .quote .qt::before{content:"\201C"; color:var(--blue-weak); font-weight:700;}
+  .quote .who{display:flex; align-items:center; gap:12px; margin-top:auto;}
+  .quote .av{width:40px; height:40px; flex:none; border-radius:50%; display:grid; place-items:center; font-size:18px; background:linear-gradient(180deg,#eef4ff,#e2ecff); border:1px solid #dbe6ff;}
+  .quote .who b{display:block; font-family:var(--disp); font-weight:600; font-size:14px; color:var(--ink);}
+  .quote .who span{font-family:var(--mono); font-size:10px; letter-spacing:.08em; color:var(--hint); text-transform:uppercase;}
+  @media(max-width:700px){ .quotes{grid-template-columns:1fr;} }
+
   /* ===== CTA (slide 6) ===== */
   .cta{position:relative; text-align:center;}
   .cta .glow{position:absolute; inset:-40% -20%; z-index:0; pointer-events:none; background:radial-gradient(45% 60% at 50% 45%, rgba(62,126,255,.14), transparent 70%);}
@@ -290,7 +302,24 @@
     </div>
   </section>
 
-  <!-- 6 CTA -->
+  <!-- 6 VOICES -->
+  <section class="slide" data-slide="voices">
+    <div class="s-inner center">
+      <div class="sec-head">
+        <span class="eyebrow r" style="--i:0">In their words</span>
+        <h2 class="r" style="--i:0">What teams on SmartMido actually say.</h2>
+        <p class="r" style="--i:1">Real feedback from the agencies running their day on SmartMido across Mongolia.</p>
+      </div>
+      <div class="quotes">
+        <div class="quote r" style="--i:2"><p class="qt">The dashboard is genuinely brilliant &mdash; I can see any period I want and keep an eye on both staff and company performance, and it shows me exactly where and what to improve.</p><div class="who"><span class="av">&#128202;</span><div><b>Director</b><span>Travel agency &middot; Mongolia</span></div></div></div>
+        <div class="quote r" style="--i:2"><p class="qt">I design the reports I need my own way, and pull every figure we hold straight out of the system. It&rsquo;s remarkably easy to use.</p><div class="who"><span class="av">&#129534;</span><div><b>Accountant</b><span>Travel agency &middot; Mongolia</span></div></div></div>
+        <div class="quote r" style="--i:3"><p class="qt">I do my entire job from one screen and everything is clear &mdash; a ticket I write in Amadeus shows up in the system within seconds.</p><div class="who"><span class="av">&#9992;</span><div><b>Agent</b><span>Travel agency &middot; Mongolia</span></div></div></div>
+        <div class="quote r" style="--i:3"><p class="qt">Everyone&rsquo;s work is connected and transparent, so working remotely is easy &mdash; and because permissions are so granular, the whole team runs comfortably on one system.</p><div class="who"><span class="av">&#128101;</span><div><b>Manager</b><span>Travel agency &middot; Mongolia</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 CTA -->
   <section class="slide cta" data-slide="cta">
     <div class="glow" aria-hidden="true"></div>
     <div class="s-inner inner center">
