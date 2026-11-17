@@ -203,6 +203,9 @@
       opacity:0;visibility:hidden;pointer-events:none;z-index:70;
       transition:opacity .24s ease,transform .24s ease,visibility .24s}
     .card:hover .cardshot{opacity:1;visibility:visible;transform:translate(-50%,0) scale(1)}
+    /* Top row has no room above — open its preview downward instead. */
+    .grid .card:nth-child(-n+3) .cardshot{top:calc(100% + 14px);bottom:auto;transform:translate(-50%,-12px) scale(.96)}
+    .grid .card:nth-child(-n+3):hover .cardshot{transform:translate(-50%,0) scale(1)}
     @media(max-width:860px){.card .cardshot{display:none}}
   </style>
 </head>
@@ -273,7 +276,7 @@
           <div class="ztag"><b>01</b> Connect</div>
           <div class="node" data-src><div class="ic">&#9992;</div><div><div class="t">Amadeus</div><span class="s">live GDS feed</span></div></div>
           <div class="node" data-src><div class="ic">&#9678;</div><div><div class="t">Sabre &middot; Galileo</div><span class="s">live GDS feed</span></div></div>
-          <div class="node" data-src><div class="ic">&#9638;</div><div><div class="t">Bank feeds</div><span class="s">auto statements</span></div></div>
+          <div class="node" data-src><div class="ic">&#9638;</div><div><div class="t">Statements</div><span class="s">upload statement</span></div></div>
         </div>
         <div class="zone mid"><div class="hub"><span class="ring r1"></span><span class="ring r2"></span><div><div class="m">MIDO</div><div class="c">Record &amp; Track</div></div></div></div>
         <div class="zone out">
