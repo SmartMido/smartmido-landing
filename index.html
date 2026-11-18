@@ -43,7 +43,8 @@
   .eyebrow::after{content:""; width:22px; height:1px; background:linear-gradient(90deg,var(--blue-weak),transparent);}
 
   /* ===== DECK (vertical scroll-snap) ===== */
-  .deck{height:100vh; height:100dvh; overflow-y:scroll; scroll-snap-type:y mandatory; scroll-behavior:smooth; scrollbar-width:none;}
+  .deck{height:100vh; height:100dvh; overflow-y:scroll; overflow-x:hidden; scroll-snap-type:y mandatory; scroll-behavior:smooth; scrollbar-width:none;}
+  .slide{overflow-x:clip;}
   .deck::-webkit-scrollbar{display:none;}
   .slide{position:relative; min-height:100vh; min-height:100dvh; display:flex; align-items:center; justify-content:center; padding:74px 56px 84px; scroll-snap-align:start; scroll-snap-stop:always;}
   .slide::before{content:""; position:absolute; inset:0; z-index:0; pointer-events:none; background:radial-gradient(72% 50% at 50% -4%, rgba(62,126,255,.055), transparent 72%);}
@@ -193,10 +194,6 @@
   @keyframes pulsering{0%,100%{transform:scale(1); opacity:.45;}50%{transform:scale(1.05); opacity:.9;}}
   @media(prefers-reduced-motion:reduce){ .btn-primary::after,.pill .dot2,.feed .st.on i,.feeds .lab .ping,.hub .ring{animation:none;} }
 
-    /* feature card hover preview */
-    .slide[data-slide="platform"] .s-inner,
-    .slide[data-slide="platform"] .grid{overflow:visible}
-    .card{position:relative;overflow:visible}
     /* Screenshot is shown full-screen on click (lightbox), not on hover. */
     .card .cardshot{display:none}
     .slide[data-slide="platform"] .card{cursor:pointer}
